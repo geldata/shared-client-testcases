@@ -44,6 +44,7 @@ const tests = join(scriptDir, "..", "tests");
 console.log("Reading testcases from", tests);
 
 let dirty = false;
+const names = new Set();
 
 for (const path of collectRecursively(tests, "")) {
   const testcases = jsonc.parse(readFileSync(join(tests, path), "utf8"));
@@ -123,6 +124,10 @@ for (const path of collectRecursively(tests, "")) {
     outTestCase.name = path.replace("/", "_").replace(".jsonc", "") + "_" +
       outTestCase.name;
     out.push(outTestCase);
+    if (names.has(outTestCase.name)) {
+      throw Error(`Duplicate test name: ${outTestCase.name}`);
+    }
+    names.add(outTestCase.name);
   }
 
   if (dirty) {
