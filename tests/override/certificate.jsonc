@@ -181,5 +181,21 @@
     "warnings": [
       "gel_and_edgedb"
     ]
+  },
+  {
+    "env": {
+      "GEL_CLIENT_TLS_SECURITY": "insecure",
+      "GEL_TLS_CA_FILE": "/home/edgedb/test/gel.pem"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/test/gel.pem": "-----BEGIN CERTIFICATE-----\ngel\n-----END CERTIFICATE-----\n"
+      }
+    },
+    "name": "CLIENT_TLS_SECURITY=insecure + TLS_CA_FILE should be insecure",
+    "result": {
+      "tlsCAData": "-----BEGIN CERTIFICATE-----\nngel\n-----END CERTIFICATE-----\n",
+      "tlsSecurity": "no_host_verification"
+    }
   }
 ]
