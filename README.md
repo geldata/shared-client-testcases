@@ -1,10 +1,10 @@
-# Shared Test Cases for EdgeDB Clients
+# Shared Test Cases for Gel Clients
 
-This repository contains test cases for different EdgeDB client bindings to
+This repository contains test cases for different Gel client bindings to
 implement consistent unit tests for connection parameters parsing, project
 handling and so on.
-[The documentation](https://www.edgedb.com/docs/reference/connection) explains
-the fundamentals.
+[The documentation](https://docs.geldata.com/reference/reference/connection)
+explains the fundamentals.
 
 ## `connection_testcases.json`
 
@@ -22,28 +22,28 @@ objects, each may contain the following input/output:
 ### Input - `opts`
 
 This is usually the values passed directly to the client as options, like the
-keyword arguments on `edgedb.create_client(...)` for Python, or direct command
+keyword arguments on `gel.create_client(...)` for Python, or direct command
 arguments for the CLI. Possible values:
 
-| key                  | value type  | value                                                                                                                                               |
-| -------------------- | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `host`               | string      | the host name or IP of the server instance                                                                                                          |
-| `port`               | integer     | the port of the server instance (test cases may contain strings and floats)                                                                         |
-| `user`               | string      | database user for authentication                                                                                                                    |
-| `password`           | string      | password for authentication                                                                                                                         |
-| `secretKey`          | string      | secret key for authentication                                                                                                                       |
-| `database`           | string      | the name of the database to use in the server instance                                                                                              |
-| `branch`             | string      | the name of the branch to use in the server instance                                                                                                |
-| `waitUntilAvailable` | string      | max time to wait before server becomes available                                                                                                    |
-| `tlsSecurity`        | enum string | one of `strict`, `no_host_verification` and `insecure` (test cases may contain invalid values)                                                      |
-| `tlsCA`              | string      | PEM string of the CA certificate to trust                                                                                                           |
-| `tlsCAFile`          | path string | path to a file containing `tlsCA`                                                                                                                   |
-| `tlsServerName`      | string      | Server name to expect when performing host verification                                                                                             |
-| `serverSettings`     | object      | additional [connection parameters](https://www.edgedb.com/docs/reference/protocol/messages#ref-protocol-msg-client-handshake) to send to the server |
-| `credentials`        | JSON string | decodes to an object with possible keys: `host`, `port`, `user`, `password`, `database`, `tls_ca`, `tls_security`                                   |
-| `credentialsFile`    | string      | path to a file containing `credentials`                                                                                                             |
-| `instance`           | string      | name of an EdgeDB instance                                                                                                                          |
-| `dsn`                | string      | EdgeDB DSN                                                                                                                                          |
+| key                  | value type  | value                                                                                                                                                      |
+| -------------------- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `host`               | string      | the host name or IP of the server instance                                                                                                                 |
+| `port`               | integer     | the port of the server instance (test cases may contain strings and floats)                                                                                |
+| `user`               | string      | database user for authentication                                                                                                                           |
+| `password`           | string      | password for authentication                                                                                                                                |
+| `secretKey`          | string      | secret key for authentication                                                                                                                              |
+| `database`           | string      | the name of the database to use in the server instance                                                                                                     |
+| `branch`             | string      | the name of the branch to use in the server instance                                                                                                       |
+| `waitUntilAvailable` | string      | max time to wait before server becomes available                                                                                                           |
+| `tlsSecurity`        | enum string | one of `strict`, `no_host_verification` and `insecure` (test cases may contain invalid values)                                                             |
+| `tlsCA`              | string      | PEM string of the CA certificate to trust                                                                                                                  |
+| `tlsCAFile`          | path string | path to a file containing `tlsCA`                                                                                                                          |
+| `tlsServerName`      | string      | Server name to expect when performing host verification                                                                                                    |
+| `serverSettings`     | object      | additional [connection parameters](https://docs.geldata.com/reference/reference/protocol/messages#ref-protocol-msg-client-handshake) to send to the server |
+| `credentials`        | JSON string | decodes to an object with possible keys: `host`, `port`, `user`, `password`, `database`, `tls_ca`, `tls_security`                                          |
+| `credentialsFile`    | string      | path to a file containing `credentials`                                                                                                                    |
+| `instance`           | string      | name of a Gel instance                                                                                                                                     |
+| `dsn`                | string      | Gel DSN                                                                                                                                                    |
 
 Note: some client bindings take a single positional argument that can be either
 `dsn` or `instance`, depending on the format.
@@ -112,19 +112,19 @@ If `platform` is absent while `fs` is present, the OS should be Linux.
 
 Expected result of parsed connection parameters as an object, containing:
 
-| key                  | value type            | value                                                                                                                                               |
-| -------------------- | --------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `address`            | list[string, integer] | the address of the server instance [host, port]                                                                                                     |
-| `user`               | string                | database user for authentication                                                                                                                    |
-| `password`           | string or `null`      | optional password for authentication                                                                                                                |
-| `secretKey`          | string or `null`      | optional secret key for authentication                                                                                                              |
-| `database`           | string                | the name of the database to use in the server instance (actually used in ver <= 5.x)                                                                |
-| `branch`             | string                | the name of the branch to use in the server instance (for future compatibility)                                                                     |
-| `waitUntilAvailable` | string                | ISO 8601 max time to wait before server becomes available                                                                                           |
-| `tlsSecurity`        | enum string           | one of `strict`, `no_host_verification` and `insecure`                                                                                              |
-| `tlsCAData`          | string or `null`      | optional PEM string of the CA certificate to trust                                                                                                  |
-| `tlsServerName`      | string or `null`      | optional server name to expect when performing host verification                                                                                    |
-| `serverSettings`     | object                | additional [connection parameters](https://www.edgedb.com/docs/reference/protocol/messages#ref-protocol-msg-client-handshake) to send to the server |
+| key                  | value type            | value                                                                                                                                                      |
+| -------------------- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `address`            | list[string, integer] | the address of the server instance [host, port]                                                                                                            |
+| `user`               | string                | database user for authentication                                                                                                                           |
+| `password`           | string or `null`      | optional password for authentication                                                                                                                       |
+| `secretKey`          | string or `null`      | optional secret key for authentication                                                                                                                     |
+| `database`           | string                | the name of the database to use in the server instance (actually used in ver <= 5.x)                                                                       |
+| `branch`             | string                | the name of the branch to use in the server instance (for future compatibility)                                                                            |
+| `waitUntilAvailable` | string                | ISO 8601 max time to wait before server becomes available                                                                                                  |
+| `tlsSecurity`        | enum string           | one of `strict`, `no_host_verification` and `insecure`                                                                                                     |
+| `tlsCAData`          | string or `null`      | optional PEM string of the CA certificate to trust                                                                                                         |
+| `tlsServerName`      | string or `null`      | optional server name to expect when performing host verification                                                                                           |
+| `serverSettings`     | object                | additional [connection parameters](https://docs.geldata.com/reference/reference/protocol/messages#ref-protocol-msg-client-handshake) to send to the server |
 
 ### Output - `error`
 
