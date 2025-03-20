@@ -518,18 +518,6 @@
     }
   },
   {
-    "name": "test_37",
-    "opts": {
-      "dsn": "edgedb://testuser@localhost/db?password=not_secret_password"
-    },
-    "result": {
-      "branch": "db",
-      "database": "db",
-      "password": "not_secret_password",
-      "user": "testuser"
-    }
-  },
-  {
     "name": "test_38",
     "opts": {
       "dsn": "edgedb://?a=abc&b=def",

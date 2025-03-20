@@ -2319,28 +2319,6 @@
     }
   },
   {
-    "name": "basic_opts_test_37",
-    "opts": {
-      "dsn": "edgedb://testuser@localhost/db?password=not_secret_password"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        5656
-      ],
-      "branch": "db",
-      "database": "db",
-      "password": "not_secret_password",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "testuser",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
     "name": "basic_opts_test_38",
     "opts": {
       "dsn": "edgedb://?a=abc&b=def",
@@ -2418,6 +2396,124 @@
       "tlsSecurity": "strict",
       "tlsServerName": null,
       "user": "testuser",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "name": "dsn_password_easy_password",
+    "opts": {
+      "dsn": "edgedb://testuser@localhost/db?password=not_secret_password"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        5656
+      ],
+      "branch": "db",
+      "database": "db",
+      "password": "not_secret_password",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "testuser",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "name": "dsn_password_hardcore_password",
+    "opts": {
+      "dsn": "edgedb://testuser@localhost/db?password=%27%22%25%5B%5D%7B%7D%3A%2F%E2%9D%A4%EF%B8%8F"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        5656
+      ],
+      "branch": "db",
+      "database": "db",
+      "password": "'\"%[]{}:/❤️",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "testuser",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "cwd": "/home/edgedb",
+      "files": {
+        "/home/edgedb/tls.pem": "-----BEGIN CERTIFICATE-----\nMIICEjCCAXsCAg36MA0GCSqGSIb3DQEBBQUAMIGbMQswCQYDVQQGEwJKUDEOMAwG\nA1UECBMFVG9reW8xEDAOBgNVBAcTB0NodW8ta3UxETAPBgNVBAoTCEZyYW5rNERE\nMRgwFgYDVQQLEw9XZWJDZXJ0IFN1cHBvcnQxGDAWBgNVBAMTD0ZyYW5rNEREIFdl\nYiBDQTEjMCEGCSqGSIb3DQEJARYUc3VwcG9ydEBmcmFuazRkZC5jb20wHhcNMTIw\nODIyMDUyNjU0WhcNMTcwODIxMDUyNjU0WjBKMQswCQYDVQQGEwJKUDEOMAwGA1UE\nCAwFVG9reW8xETAPBgNVBAoMCEZyYW5rNEREMRgwFgYDVQQDDA93d3cuZXhhbXBs\nZS5jb20wXDANBgkqhkiG9w0BAQEFAANLADBIAkEAm/xmkHmEQrurE/0re/jeFRLl\n8ZPjBop7uLHhnia7lQG/5zDtZIUC3RVpqDSwBuw/NTweGyuP+o8AG98HxqxTBwID\nAQABMA0GCSqGSIb3DQEBBQUAA4GBABS2TLuBeTPmcaTaUW/LCB2NYOy8GMdzR1mx\n8iBIu2H6/E2tiY3RIevV2OW61qY2/XRQg7YPxx3ffeUugX9F4J/iPnnu1zAxxyBy\n2VguKv4SWjRFoRkIfIlHX0qVviMhSlNy2ioFLy7JcPZb+v3ftDGywUqcBiVDoea0\nHn+GmxZA\n-----END CERTIFICATE-----\n"
+      }
+    },
+    "name": "dsn_torture_all_options_in_query",
+    "opts": {
+      "dsn": "gel://localhost/?password=not_secret_password&port=1234&database=db&user=testuser&tls_ca_file=/home/edgedb/tls.pem&tls_security=insecure&tls_server_name=localhost&server_settings=a=b&wait_until_available=PT300S"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        1234
+      ],
+      "branch": "db",
+      "database": "db",
+      "password": "not_secret_password",
+      "secretKey": null,
+      "serverSettings": {
+        "server_settings": "a=b"
+      },
+      "tlsCAData": "-----BEGIN CERTIFICATE-----\nMIICEjCCAXsCAg36MA0GCSqGSIb3DQEBBQUAMIGbMQswCQYDVQQGEwJKUDEOMAwG\nA1UECBMFVG9reW8xEDAOBgNVBAcTB0NodW8ta3UxETAPBgNVBAoTCEZyYW5rNERE\nMRgwFgYDVQQLEw9XZWJDZXJ0IFN1cHBvcnQxGDAWBgNVBAMTD0ZyYW5rNEREIFdl\nYiBDQTEjMCEGCSqGSIb3DQEJARYUc3VwcG9ydEBmcmFuazRkZC5jb20wHhcNMTIw\nODIyMDUyNjU0WhcNMTcwODIxMDUyNjU0WjBKMQswCQYDVQQGEwJKUDEOMAwGA1UE\nCAwFVG9reW8xETAPBgNVBAoMCEZyYW5rNEREMRgwFgYDVQQDDA93d3cuZXhhbXBs\nZS5jb20wXDANBgkqhkiG9w0BAQEFAANLADBIAkEAm/xmkHmEQrurE/0re/jeFRLl\n8ZPjBop7uLHhnia7lQG/5zDtZIUC3RVpqDSwBuw/NTweGyuP+o8AG98HxqxTBwID\nAQABMA0GCSqGSIb3DQEBBQUAA4GBABS2TLuBeTPmcaTaUW/LCB2NYOy8GMdzR1mx\n8iBIu2H6/E2tiY3RIevV2OW61qY2/XRQg7YPxx3ffeUugX9F4J/iPnnu1zAxxyBy\n2VguKv4SWjRFoRkIfIlHX0qVviMhSlNy2ioFLy7JcPZb+v3ftDGywUqcBiVDoea0\nHn+GmxZA\n-----END CERTIFICATE-----\n",
+      "tlsSecurity": "insecure",
+      "tlsServerName": "localhost",
+      "user": "testuser",
+      "waitUntilAvailable": "PT300S"
+    }
+  },
+  {
+    "name": "dsn_torture_empty_host",
+    "opts": {
+      "dsn": "gel://?password=not_secret_password&port=1234"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        1234
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": "not_secret_password",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "name": "dsn_torture_empty_host_slash_db",
+    "opts": {
+      "dsn": "gel:///?password=not_secret_password&port=1234"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        1234
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": "not_secret_password",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
       "waitUntilAvailable": "PT30S"
     }
   },
