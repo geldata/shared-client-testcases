@@ -2400,6 +2400,943 @@
     }
   },
   {
+    "fs": {
+      "files": {
+        "/home/edgedb/test/credentials.json": "{\"port\": 10702, \"user\": \"test3n\"}"
+      }
+    },
+    "name": "credentials_file_test_0",
+    "opts": {
+      "credentialsFile": "/home/edgedb/test/credentials.json"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_CREDENTIALS_FILE": "/home/edgedb/test/credentials.json"
+    },
+    "name": "credentials_file_test_12",
+    "opts": {
+      "dsn": "edgedb://user3:123123@localhost:5555/abcdef"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        5555
+      ],
+      "branch": "abcdef",
+      "database": "abcdef",
+      "password": "123123",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "user3",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_CREDENTIALS_FILE": "/home/edgedb/test/credentials.json"
+    },
+    "name": "credentials_file_test_23",
+    "opts": {
+      "host": "test.local"
+    },
+    "result": {
+      "address": [
+        "test.local",
+        5656
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_PORT": "1234"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/test/credentials.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
+      }
+    },
+    "name": "credentials_file_test_34",
+    "opts": {
+      "credentialsFile": "/home/edgedb/test/credentials.json"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test3n",
+      "database": "test3n",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_CREDENTIALS_FILE": "/home/edgedb/test/credentials.json",
+      "EDGEDB_DSN": "edgedb://user3:123123@localhost:5555/abcdef"
+    },
+    "name": "credentials_file_test_56",
+    "opts": {
+      "host": "localhost",
+      "port": 10701
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10701
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "GEL_CREDENTIALS_FILE": "/home/edgedb/test/credentials.json"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/test/credentials.json": "{\"port\": 10702, \"user\": \"test3n\"}"
+      }
+    },
+    "name": "credentials_file_test_credentials_file_env",
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_123.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_1",
+    "opts": {
+      "instance": "test_123"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test3n",
+      "database": "test3n",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test-123.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_4",
+    "opts": {
+      "instance": "test-123"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test3n",
+      "database": "test3n",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_INSTANCE": "test_instance"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_14",
+    "opts": {
+      "user": "super_user"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test3n",
+      "database": "test3n",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "super_user",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_CLIENT_TLS_SECURITY": "no_host_verification",
+      "EDGEDB_INSTANCE": "test_instance"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_15",
+    "opts": {
+      "user": "super_user"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test3n",
+      "database": "test3n",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "no_host_verification",
+      "tlsServerName": null,
+      "user": "super_user",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/1234567890123456789012345678901234567890123456789012345678901234.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_16",
+    "opts": {
+      "instance": "1234567890123456789012345678901234567890123456789012345678901234"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test3n",
+      "database": "test3n",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_CLIENT_TLS_SECURITY": "insecure",
+      "EDGEDB_INSTANCE": "test_instance"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_17",
+    "opts": {
+      "user": "super_user"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test3n",
+      "database": "test3n",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "insecure",
+      "tlsServerName": null,
+      "user": "super_user",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"edgedb\", \"tls_verify_hostname\": true, \"tls_security\": \"strict\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_18",
+    "opts": {
+      "instance": "test_instance"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"edgedb\", \"tls_verify_hostname\": false, \"tls_security\": \"no_host_verification\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_19",
+    "opts": {
+      "instance": "test_instance"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "no_host_verification",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"edgedb\", \"tls_verify_hostname\": false, \"tls_security\": \"insecure\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_20",
+    "opts": {
+      "instance": "test_instance"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "insecure",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/123-test.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_28",
+    "opts": {
+      "instance": "123-test"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test3n",
+      "database": "test3n",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_BRANCH": "test_db"
+    },
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_47",
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test_db",
+      "database": "test_db",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_BRANCH": "test_db"
+    },
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_48",
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test_db",
+      "database": "test_db",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_DATABASE": "test_db"
+    },
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_49",
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test_db",
+      "database": "test_db",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_DSN": "edgedb://testhost:1234/?branch=db"
+    },
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_50",
+    "result": {
+      "address": [
+        "testhost",
+        1234
+      ],
+      "branch": "db",
+      "database": "db",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_DSN": "edgedb://testhost:1234/?branch=db"
+    },
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_51",
+    "result": {
+      "address": [
+        "testhost",
+        1234
+      ],
+      "branch": "db",
+      "database": "db",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_53",
+    "opts": {
+      "dsn": "edgedb://testhost:1234/?branch=db"
+    },
+    "result": {
+      "address": [
+        "testhost",
+        1234
+      ],
+      "branch": "db",
+      "database": "db",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_54",
+    "opts": {
+      "dsn": "edgedb://testhost:1234/?branch=db"
+    },
+    "result": {
+      "address": [
+        "testhost",
+        1234
+      ],
+      "branch": "db",
+      "database": "db",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_55",
+    "opts": {
+      "branch": "test_db"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test_db",
+      "database": "test_db",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_57",
+    "opts": {
+      "branch": "test_db"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test_db",
+      "database": "test_db",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_58",
+    "opts": {
+      "database": "test_db"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test_db",
+      "database": "test_db",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_BRANCH": "experimental22"
+    },
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_74",
+    "opts": {
+      "database": "feature",
+      "host": "testhost",
+      "port": 1312
+    },
+    "result": {
+      "address": [
+        "testhost",
+        1312
+      ],
+      "branch": "feature",
+      "database": "feature",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_DATABASE": "experimental23"
+    },
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "instance-name": "test_project",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_75",
+    "opts": {
+      "branch": "feature",
+      "host": "testhost",
+      "port": 1312
+    },
+    "result": {
+      "address": [
+        "testhost",
+        1312
+      ],
+      "branch": "feature",
+      "database": "feature",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_PORT": "10701"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_test_77",
+    "opts": {
+      "instance": "test_instance"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test3n",
+      "database": "test3n",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "test3n",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_INSTANCE": "edgedb",
+      "GEL_INSTANCE": "gel"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/credentials/edgedb.json": "{\"port\": 5555, \"user\": \"test1n\", \"password\": \"wrong\", \"database\": \"test2n\"}",
+        "/home/edgedb/.config/edgedb/credentials/gel.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "credentials_instance_Use GEL_INSTANCE instead of EDGEDB_INSTANCE",
+    "opts": {
+      "user": "super_user"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        10702
+      ],
+      "branch": "test3n",
+      "database": "test3n",
+      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "super_user",
+      "waitUntilAvailable": "PT30S"
+    },
+    "warnings": [
+      "gel_and_edgedb"
+    ]
+  },
+  {
     "name": "dsn_password_easy_password",
     "opts": {
       "dsn": "edgedb://testuser@localhost/db?password=not_secret_password"
@@ -2563,15 +3500,6 @@
       "type": "env_not_found"
     },
     "name": "error_env_not_found_test_1",
-    "opts": {
-      "dsn": "edgedb://?host_env="
-    }
-  },
-  {
-    "error": {
-      "type": "env_not_found"
-    },
-    "name": "error_env_not_found_test_2",
     "opts": {
       "dsn": "edgedb://?host_env="
     }
@@ -3994,61 +4922,6 @@
     ]
   },
   {
-    "fs": {
-      "files": {
-        "/home/edgedb/test/credentials.json": "{\"port\": 10702, \"user\": \"test3n\"}"
-      }
-    },
-    "name": "override_other_test_0",
-    "opts": {
-      "credentialsFile": "/home/edgedb/test/credentials.json"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "__default__",
-      "database": "edgedb",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_123.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_1",
-    "opts": {
-      "instance": "test_123"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test3n",
-      "database": "test3n",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
     "env": {
       "EDGEDB_PASSWORD": "password"
     },
@@ -4106,34 +4979,6 @@
       "tlsSecurity": "strict",
       "tlsServerName": null,
       "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test-123.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_4",
-    "opts": {
-      "instance": "test-123"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test3n",
-      "database": "test3n",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
       "waitUntilAvailable": "PT30S"
     }
   },
@@ -4327,31 +5172,6 @@
   },
   {
     "env": {
-      "EDGEDB_CREDENTIALS_FILE": "/home/edgedb/test/credentials.json"
-    },
-    "name": "override_other_test_12",
-    "opts": {
-      "dsn": "edgedb://user3:123123@localhost:5555/abcdef"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        5555
-      ],
-      "branch": "abcdef",
-      "database": "abcdef",
-      "password": "123123",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "user3",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
       "EDGEDB_PASSWORD": "qwerty"
     },
     "name": "override_other_test_13",
@@ -4373,213 +5193,6 @@
       "tlsSecurity": "strict",
       "tlsServerName": null,
       "user": "user_123",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_INSTANCE": "test_instance"
-    },
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_14",
-    "opts": {
-      "user": "super_user"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test3n",
-      "database": "test3n",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "super_user",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_CLIENT_TLS_SECURITY": "no_host_verification",
-      "EDGEDB_INSTANCE": "test_instance"
-    },
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_15",
-    "opts": {
-      "user": "super_user"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test3n",
-      "database": "test3n",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "no_host_verification",
-      "tlsServerName": null,
-      "user": "super_user",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/1234567890123456789012345678901234567890123456789012345678901234.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_16",
-    "opts": {
-      "instance": "1234567890123456789012345678901234567890123456789012345678901234"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test3n",
-      "database": "test3n",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_CLIENT_TLS_SECURITY": "insecure",
-      "EDGEDB_INSTANCE": "test_instance"
-    },
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_17",
-    "opts": {
-      "user": "super_user"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test3n",
-      "database": "test3n",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "insecure",
-      "tlsServerName": null,
-      "user": "super_user",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"edgedb\", \"tls_verify_hostname\": true, \"tls_security\": \"strict\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_18",
-    "opts": {
-      "instance": "test_instance"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "__default__",
-      "database": "edgedb",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"edgedb\", \"tls_verify_hostname\": false, \"tls_security\": \"no_host_verification\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_19",
-    "opts": {
-      "instance": "test_instance"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "__default__",
-      "database": "edgedb",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "no_host_verification",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"edgedb\", \"tls_verify_hostname\": false, \"tls_security\": \"insecure\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_20",
-    "opts": {
-      "instance": "test_instance"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "__default__",
-      "database": "edgedb",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "insecure",
-      "tlsServerName": null,
-      "user": "edgedb",
       "waitUntilAvailable": "PT30S"
     }
   },
@@ -4632,31 +5245,6 @@
       "tlsServerName": null,
       "user": "edgedb",
       "waitUntilAvailable": "PT9M"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_CREDENTIALS_FILE": "/home/edgedb/test/credentials.json"
-    },
-    "name": "override_other_test_23",
-    "opts": {
-      "host": "test.local"
-    },
-    "result": {
-      "address": [
-        "test.local",
-        5656
-      ],
-      "branch": "__default__",
-      "database": "edgedb",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
     }
   },
   {
@@ -4768,34 +5356,6 @@
       "tlsSecurity": "strict",
       "tlsServerName": null,
       "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/123-test.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_28",
-    "opts": {
-      "instance": "123-test"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test3n",
-      "database": "test3n",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
       "waitUntilAvailable": "PT30S"
     }
   },
@@ -4938,36 +5498,6 @@
       "tlsSecurity": "strict",
       "tlsServerName": null,
       "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_PORT": "1234"
-    },
-    "fs": {
-      "files": {
-        "/home/edgedb/test/credentials.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
-      }
-    },
-    "name": "override_other_test_34",
-    "opts": {
-      "credentialsFile": "/home/edgedb/test/credentials.json"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test3n",
-      "database": "test3n",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
       "waitUntilAvailable": "PT30S"
     }
   },
@@ -5327,176 +5857,6 @@
   },
   {
     "env": {
-      "EDGEDB_BRANCH": "test_db"
-    },
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_47",
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test_db",
-      "database": "test_db",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_BRANCH": "test_db"
-    },
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_48",
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test_db",
-      "database": "test_db",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_DATABASE": "test_db"
-    },
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_49",
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test_db",
-      "database": "test_db",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_DSN": "edgedb://testhost:1234/?branch=db"
-    },
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_50",
-    "result": {
-      "address": [
-        "testhost",
-        1234
-      ],
-      "branch": "db",
-      "database": "db",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_DSN": "edgedb://testhost:1234/?branch=db"
-    },
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_51",
-    "result": {
-      "address": [
-        "testhost",
-        1234
-      ],
-      "branch": "db",
-      "database": "db",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
       "EDGEDB_HOST": "test.local"
     },
     "name": "override_other_test_52",
@@ -5517,203 +5877,6 @@
       "tlsSecurity": "strict",
       "tlsServerName": null,
       "user": "user3",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_53",
-    "opts": {
-      "dsn": "edgedb://testhost:1234/?branch=db"
-    },
-    "result": {
-      "address": [
-        "testhost",
-        1234
-      ],
-      "branch": "db",
-      "database": "db",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_54",
-    "opts": {
-      "dsn": "edgedb://testhost:1234/?branch=db"
-    },
-    "result": {
-      "address": [
-        "testhost",
-        1234
-      ],
-      "branch": "db",
-      "database": "db",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_55",
-    "opts": {
-      "branch": "test_db"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test_db",
-      "database": "test_db",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_CREDENTIALS_FILE": "/home/edgedb/test/credentials.json",
-      "EDGEDB_DSN": "edgedb://user3:123123@localhost:5555/abcdef"
-    },
-    "name": "override_other_test_56",
-    "opts": {
-      "host": "localhost",
-      "port": 10701
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10701
-      ],
-      "branch": "__default__",
-      "database": "edgedb",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_57",
-    "opts": {
-      "branch": "test_db"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test_db",
-      "database": "test_db",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_58",
-    "opts": {
-      "database": "test_db"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test_db",
-      "database": "test_db",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
       "waitUntilAvailable": "PT30S"
     }
   },
@@ -6106,84 +6269,6 @@
   },
   {
     "env": {
-      "EDGEDB_BRANCH": "experimental22"
-    },
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_74",
-    "opts": {
-      "database": "feature",
-      "host": "testhost",
-      "port": 1312
-    },
-    "result": {
-      "address": [
-        "testhost",
-        1312
-      ],
-      "branch": "feature",
-      "database": "feature",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_DATABASE": "experimental23"
-    },
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_project.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"branch\": \"test3n\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "instance-name": "test_project",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_75",
-    "opts": {
-      "branch": "feature",
-      "host": "testhost",
-      "port": 1312
-    },
-    "result": {
-      "address": [
-        "testhost",
-        1312
-      ],
-      "branch": "feature",
-      "database": "feature",
-      "password": null,
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
       "EDGEDB_INSTANCE": "test_instance"
     },
     "name": "override_other_test_76",
@@ -6204,37 +6289,6 @@
       "tlsSecurity": "strict",
       "tlsServerName": null,
       "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_PORT": "10701"
-    },
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/test_instance.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_77",
-    "opts": {
-      "instance": "test_instance"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test3n",
-      "database": "test3n",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "test3n",
       "waitUntilAvailable": "PT30S"
     }
   },
@@ -6319,42 +6373,6 @@
       "tlsSecurity": "strict",
       "tlsServerName": null,
       "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    },
-    "warnings": [
-      "gel_and_edgedb"
-    ]
-  },
-  {
-    "env": {
-      "EDGEDB_INSTANCE": "edgedb",
-      "GEL_INSTANCE": "gel"
-    },
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/credentials/edgedb.json": "{\"port\": 5555, \"user\": \"test1n\", \"password\": \"wrong\", \"database\": \"test2n\"}",
-        "/home/edgedb/.config/edgedb/credentials/gel.json": "{\"port\": 10702, \"user\": \"test3n\", \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_Use GEL_INSTANCE instead of EDGEDB_INSTANCE",
-    "opts": {
-      "user": "super_user"
-    },
-    "result": {
-      "address": [
-        "localhost",
-        10702
-      ],
-      "branch": "test3n",
-      "database": "test3n",
-      "password": "lZTBy1RVCfOpBAOwSCwIyBIR",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "super_user",
       "waitUntilAvailable": "PT30S"
     },
     "warnings": [
