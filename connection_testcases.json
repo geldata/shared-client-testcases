@@ -2558,6 +2558,33 @@
     }
   },
   {
+    "fs": {
+      "files": {
+        "/home/edgedb/test/credentials.json": "{}"
+      }
+    },
+    "name": "credentials_file_test_empty_credentials_file",
+    "opts": {
+      "credentialsFile": "/home/edgedb/test/credentials.json"
+    },
+    "result": {
+      "address": [
+        "localhost",
+        5656
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
     "env": {
       "EDGEDB_PORT": "1234"
     },
@@ -3621,20 +3648,6 @@
     "name": "error_file_not_found_test_3",
     "opts": {
       "dsn": "edgedb://testuser@localhost/db?secret_key_file=/home/edgedb/secret_key"
-    }
-  },
-  {
-    "error": {
-      "type": "invalid_credentials_file"
-    },
-    "fs": {
-      "files": {
-        "/home/edgedb/test/credentials.json": "{\"port\": 10702, \"password\": \"lZTBy1RVCfOpBAOwSCwIyBIR\", \"database\": \"test3n\"}"
-      }
-    },
-    "name": "error_invalid_credentials_file_test_0",
-    "opts": {
-      "credentialsFile": "/home/edgedb/test/credentials.json"
     }
   },
   {
