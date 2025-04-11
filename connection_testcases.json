@@ -2400,6 +2400,171 @@
     }
   },
   {
+    "env": {
+      "GEL_CLOUD_PROFILE": "gel"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/cloud-credentials/gel.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "cloud_profile_Missing default cloud profile",
+    "opts": {
+      "instance": "test-org/test-123"
+    },
+    "result": {
+      "address": [
+        "test-123--test-org.c-96.i.local-1.internal",
+        5656
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg",
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_CLOUD_PROFILE": "test"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/cloud-credentials/default.json": "{\"secret_key\": \"invalid_secret_key\"}",
+        "/home/edgedb/.config/edgedb/cloud-credentials/test.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "cloud_profile_profile_override",
+    "opts": {
+      "instance": "test-org/test-123"
+    },
+    "result": {
+      "address": [
+        "test-123--test-org.c-96.i.local-1.internal",
+        5656
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg",
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_CLOUD_PROFILE": "ttt"
+    },
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/cloud-credentials/default.json": "{\"secret_key\": \"invalid_secret_key\"}",
+        "/home/edgedb/.config/edgedb/cloud-credentials/ttt.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "cloud-profile": "default",
+          "instance-name": "testorg/test-123",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "cloud_profile_profile_override_2",
+    "result": {
+      "address": [
+        "test-123--testorg.c-31.i.local-1.internal",
+        5656
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg",
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_SECRET_KEY": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg"
+    },
+    "fs": {
+      "files": {},
+      "homedir": "/home/edgedb"
+    },
+    "name": "cloud_profile_Secret key can be loaded from environment variable",
+    "opts": {
+      "instance": "testorg/test-123"
+    },
+    "result": {
+      "address": [
+        "test-123--testorg.c-31.i.local-1.internal",
+        5656
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg",
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    }
+  },
+  {
+    "env": {
+      "EDGEDB_CLOUD_PROFILE": "edgedb",
+      "GEL_CLOUD_PROFILE": "gel"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/cloud-credentials/default.json": "{\"secret_key\": \"nbwt_invalid_secret_key\"}",
+        "/home/edgedb/.config/edgedb/cloud-credentials/edgedb.json": "{\"secret_key\": \"nbwt_invalid_secret_key\"}",
+        "/home/edgedb/.config/edgedb/cloud-credentials/gel.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "cloud_profile_Use GEL_CLOUD_PROFILE instead of EDGEDB_CLOUD_PROFILE",
+    "opts": {
+      "instance": "test-org/test-123"
+    },
+    "result": {
+      "address": [
+        "test-123--test-org.c-96.i.local-1.internal",
+        5656
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": null,
+      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg",
+      "serverSettings": {},
+      "tlsCAData": null,
+      "tlsSecurity": "strict",
+      "tlsServerName": null,
+      "user": "edgedb",
+      "waitUntilAvailable": "PT30S"
+    },
+    "warnings": [
+      "gel_and_edgedb"
+    ]
+  },
+  {
     "fs": {
       "files": {
         "/home/edgedb/test/credentials.json": "{\"port\": 10702, \"user\": \"test3n\"}"
@@ -4572,22 +4737,6 @@
     }
   },
   {
-    "env": {
-      "EDGEDB_SECRET_KEY": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg"
-    },
-    "error": {
-      "type": "secret_key_not_found"
-    },
-    "fs": {
-      "files": {},
-      "homedir": "/home/edgedb"
-    },
-    "name": "error_secret_key_not_found_test_1",
-    "opts": {
-      "instance": "testorg/test-123"
-    }
-  },
-  {
     "error": {
       "type": "unix_socket_unsupported"
     },
@@ -5400,38 +5549,6 @@
     }
   },
   {
-    "env": {
-      "EDGEDB_CLOUD_PROFILE": "test"
-    },
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/cloud-credentials/default.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9\"}",
-        "/home/edgedb/.config/edgedb/cloud-credentials/test.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_29",
-    "opts": {
-      "instance": "test-org/test-123"
-    },
-    "result": {
-      "address": [
-        "test-123--test-org.c-96.i.local-1.internal",
-        5656
-      ],
-      "branch": "__default__",
-      "database": "edgedb",
-      "password": null,
-      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg",
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
     "fs": {
       "files": {
         "/home/edgedb/.config/edgedb/cloud-credentials/default.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}"
@@ -5614,42 +5731,6 @@
       "homedir": "/home/edgedb"
     },
     "name": "override_other_test_37",
-    "result": {
-      "address": [
-        "test-123--testorg.c-31.i.local-1.internal",
-        5656
-      ],
-      "branch": "__default__",
-      "database": "edgedb",
-      "password": null,
-      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg",
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_CLOUD_PROFILE": "ttt"
-    },
-    "fs": {
-      "cwd": "/home/edgedb/test",
-      "files": {
-        "/home/edgedb/.config/edgedb/cloud-credentials/default.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9\"}",
-        "/home/edgedb/.config/edgedb/cloud-credentials/ttt.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}",
-        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
-          "cloud-profile": "default",
-          "instance-name": "testorg/test-123",
-          "project-path": "/home/edgedb/test"
-        },
-        "/home/edgedb/test/edgedb.toml": ""
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_test_38",
     "result": {
       "address": [
         "test-123--testorg.c-31.i.local-1.internal",
@@ -6380,44 +6461,7 @@
       "tlsServerName": null,
       "user": "testuser",
       "waitUntilAvailable": "PT30S"
-    }
-  },
-  {
-    "env": {
-      "EDGEDB_CLOUD_PROFILE": "edgedb",
-      "GEL_CLOUD_PROFILE": "gel"
     },
-    "fs": {
-      "files": {
-        "/home/edgedb/.config/edgedb/cloud-credentials/default.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9\"}",
-        "/home/edgedb/.config/edgedb/cloud-credentials/edgedb.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9\"}",
-        "/home/edgedb/.config/edgedb/cloud-credentials/gel.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}"
-      },
-      "homedir": "/home/edgedb"
-    },
-    "name": "override_other_Use GEL_CLOUD_PROFILE instead of EDGEDB_CLOUD_PROFILE",
-    "opts": {
-      "instance": "test-org/test-123"
-    },
-    "result": {
-      "address": [
-        "test-123--test-org.c-96.i.local-1.internal",
-        5656
-      ],
-      "branch": "__default__",
-      "database": "edgedb",
-      "password": null,
-      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg",
-      "serverSettings": {},
-      "tlsCAData": null,
-      "tlsSecurity": "strict",
-      "tlsServerName": null,
-      "user": "edgedb",
-      "waitUntilAvailable": "PT30S"
-    },
-    "warnings": [
-      "gel_and_edgedb"
-    ],
     "~": "/*** WARNING: do not edit this file. This is automatically rebuilt using tools/rebuild.ts ***/"
   }
 ]

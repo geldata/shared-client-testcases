@@ -1,0 +1,126 @@
+[
+  {
+    "env": {
+      "EDGEDB_CLOUD_PROFILE": "test"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/cloud-credentials/default.json": "{\"secret_key\": \"invalid_secret_key\"}",
+        "/home/edgedb/.config/edgedb/cloud-credentials/test.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "profile_override",
+    "opts": {
+      "instance": "test-org/test-123"
+    },
+    "result": {
+      "address": [
+        "test-123--test-org.c-96.i.local-1.internal",
+        5656
+      ],
+      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg"
+    }
+  },
+
+  {
+    "env": {
+      "EDGEDB_CLOUD_PROFILE": "ttt"
+    },
+    "fs": {
+      "cwd": "/home/edgedb/test",
+      "files": {
+        "/home/edgedb/.config/edgedb/cloud-credentials/default.json": "{\"secret_key\": \"invalid_secret_key\"}",
+        "/home/edgedb/.config/edgedb/cloud-credentials/ttt.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}",
+        "/home/edgedb/.config/edgedb/projects/test-${HASH}": {
+          "cloud-profile": "default",
+          "instance-name": "testorg/test-123",
+          "project-path": "/home/edgedb/test"
+        },
+        "/home/edgedb/test/edgedb.toml": ""
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "profile_override_2",
+    "result": {
+      "address": [
+        "test-123--testorg.c-31.i.local-1.internal",
+        5656
+      ],
+      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg"
+    }
+  },
+
+  {
+    "env": {
+      "GEL_CLOUD_PROFILE": "gel",
+      "EDGEDB_CLOUD_PROFILE": "edgedb"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/cloud-credentials/default.json": "{\"secret_key\": \"nbwt_invalid_secret_key\"}",
+        "/home/edgedb/.config/edgedb/cloud-credentials/gel.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}",
+        "/home/edgedb/.config/edgedb/cloud-credentials/edgedb.json": "{\"secret_key\": \"nbwt_invalid_secret_key\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "Use GEL_CLOUD_PROFILE instead of EDGEDB_CLOUD_PROFILE",
+    "opts": {
+      "instance": "test-org/test-123"
+    },
+    "result": {
+      "address": [
+        "test-123--test-org.c-96.i.local-1.internal",
+        5656
+      ],
+      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg"
+    },
+    "warnings": [
+      "gel_and_edgedb"
+    ]
+  },
+
+  {
+    "env": {
+      "GEL_CLOUD_PROFILE": "gel"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/.config/edgedb/cloud-credentials/gel.json": "{\"secret_key\": \"nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg\"}"
+      },
+      "homedir": "/home/edgedb"
+    },
+    "name": "Missing default cloud profile",
+    "opts": {
+      "instance": "test-org/test-123"
+    },
+    "result": {
+      "address": [
+        "test-123--test-org.c-96.i.local-1.internal",
+        5656
+      ],
+      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg"
+    }
+  },
+
+  {
+    "env": {
+      "EDGEDB_SECRET_KEY": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg"
+    },
+    "fs": {
+      "files": {},
+      "homedir": "/home/edgedb"
+    },
+    "name": "Secret key can be loaded from environment variable",
+    "opts": {
+      "instance": "testorg/test-123"
+    },
+    "result": {
+      "address": [
+        "test-123--testorg.c-31.i.local-1.internal",
+        5656
+      ],
+      "secretKey": "nbwt_eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJlZGdlZGIuc2VydmVyLmFueV9yb2xlIjp0cnVlLCJpYXQiOjE2NjkzMTE3NjMsImlzcyI6ImxvY2FsLTEuaW50ZXJuYWwiLCJuZWJ1bGEuc2NvcGVzIjpbImFkbWluIl0sIm5lYnVsYS51c2VyX2lkIjoiM2U3ODU4YTgtNmJjNy0xMWVkLWFmNTAtMTdiMzkzMjlmZmEyIn0.9cS6-rR00fgmEmGu423IP3snJvmXe7ZGol7ZlYuHBNqmKGrWtTsMZPj-3C7dmureUmk3ZUttxioouPeAreKueg"
+    }
+  }
+]
