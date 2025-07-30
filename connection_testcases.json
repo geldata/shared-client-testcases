@@ -977,33 +977,6 @@
   },
   {
     "env": {
-      "GEL_CREDENTIALS_FILE": "/tmp/cred"
-    },
-    "fs": {
-      "files": {
-        "/tmp/cred": "{\"user\":\"admin\",\"host\":\"localhost\",\"port\":10708,\"password\":\"6QLRngM44PSU79LCwdLUUdl6\",\"secret_key\":null,\"database\":\"edgedb\",\"branch\":\"__default__\",\"tls_ca\":\"-----BEGIN CERTIFICATE-----\\nMIICzDCCAbSgAwIBAgIQb53waCS6TqmLGOwBEG5+EzANBgkqhkiG9w0BAQsFADAV\\nMRMwEQYDVQQDDApHZWwgU2VydmVyMB4XDTI1MDYyNTExNDEzNFoXDTQ0MDgyNTEx\\nNDEzNFowFTETMBEGA1UEAwwKR2VsIFNlcnZlcjCCASIwDQYJKoZIhvcNAQEBBQAD\\nggEPADCCAQoCggEBAO8AKwCbQpodJY/hV9FtVKWSypNJfZss9WmbhhluDFZpYE7y\\nOrLKafKcIQ+ZusotE/OwBBk+jRFVVCj8GZ3MG++OUdYRYw5mdraA+P3Myx3+hUHG\\nZdmWifvqW1qihZY86uS1fW6Wckfj+PDCtMFYmd1eM4nVI8GHTIAvnTw/nM3e81Q3\\nrsQhUgHNTNGzm4u7/U/GhIaUKDSlsAPTTRRxCYibM7+7nyfzZ/DHo5GqWaUYOFui\\nD+TVxVKbZF1DBgt/W3mdE0VPL94lks96L1BVvsqC9BqzqSpMblMJMWo7FjWT1XI1\\nkXszsXet2ry8bo/+zfDo7uYTX3cY4EpdfucuTMECAwEAAaMYMBYwFAYDVR0RBA0w\\nC4IJbG9jYWxob3N0MA0GCSqGSIb3DQEBCwUAA4IBAQC/laK6xmt5hLYjPQARvrqS\\nBUbIpp5W5TzbwDAYM9F5g3HD53bo/17PbPkArhwCwNvkcjoUcb8gX1OSdpPEFoKX\\nEhsuEI3DJ7TpSDZ5fuqpIKJiVaOQ/GYsWvdlTDlQxkEgGraBW79GZI3p1gNvg2ga\\naJ1v4DvLlTbSBXzZiyHLsjdCZAfwMbSANwnNTeUOgj8kwlRmeETYiGA3apLqg1BV\\n2OpfVvzdvOrhoKA+FHQNmQ6x6Z9tibdDBrTrm8CMOhtrc4v1c8sOqi5vMR7bxt0y\\nlw/tZaUZ62XYp+9lviFLaVZm1a8LpLR1Z3O4FzkAQ0mlO6lJIVfRTU9n8DnF8FZD\\n-----END CERTIFICATE-----\\n\",\"tls_security\":\"no_host_verification\",\"tls_server_name\":null}"
-      }
-    },
-    "name": "basic_env_test_branch__default__",
-    "result": {
-      "address": [
-        "localhost",
-        10708
-      ],
-      "branch": "__default__",
-      "database": "edgedb",
-      "password": "6QLRngM44PSU79LCwdLUUdl6",
-      "secretKey": null,
-      "serverSettings": {},
-      "tlsCAData": "-----BEGIN CERTIFICATE-----\nMIICzDCCAbSgAwIBAgIQb53waCS6TqmLGOwBEG5+EzANBgkqhkiG9w0BAQsFADAV\nMRMwEQYDVQQDDApHZWwgU2VydmVyMB4XDTI1MDYyNTExNDEzNFoXDTQ0MDgyNTEx\nNDEzNFowFTETMBEGA1UEAwwKR2VsIFNlcnZlcjCCASIwDQYJKoZIhvcNAQEBBQAD\nggEPADCCAQoCggEBAO8AKwCbQpodJY/hV9FtVKWSypNJfZss9WmbhhluDFZpYE7y\nOrLKafKcIQ+ZusotE/OwBBk+jRFVVCj8GZ3MG++OUdYRYw5mdraA+P3Myx3+hUHG\nZdmWifvqW1qihZY86uS1fW6Wckfj+PDCtMFYmd1eM4nVI8GHTIAvnTw/nM3e81Q3\nrsQhUgHNTNGzm4u7/U/GhIaUKDSlsAPTTRRxCYibM7+7nyfzZ/DHo5GqWaUYOFui\nD+TVxVKbZF1DBgt/W3mdE0VPL94lks96L1BVvsqC9BqzqSpMblMJMWo7FjWT1XI1\nkXszsXet2ry8bo/+zfDo7uYTX3cY4EpdfucuTMECAwEAAaMYMBYwFAYDVR0RBA0w\nC4IJbG9jYWxob3N0MA0GCSqGSIb3DQEBCwUAA4IBAQC/laK6xmt5hLYjPQARvrqS\nBUbIpp5W5TzbwDAYM9F5g3HD53bo/17PbPkArhwCwNvkcjoUcb8gX1OSdpPEFoKX\nEhsuEI3DJ7TpSDZ5fuqpIKJiVaOQ/GYsWvdlTDlQxkEgGraBW79GZI3p1gNvg2ga\naJ1v4DvLlTbSBXzZiyHLsjdCZAfwMbSANwnNTeUOgj8kwlRmeETYiGA3apLqg1BV\n2OpfVvzdvOrhoKA+FHQNmQ6x6Z9tibdDBrTrm8CMOhtrc4v1c8sOqi5vMR7bxt0y\nlw/tZaUZ62XYp+9lviFLaVZm1a8LpLR1Z3O4FzkAQ0mlO6lJIVfRTU9n8DnF8FZD\n-----END CERTIFICATE-----\n",
-      "tlsSecurity": "no_host_verification",
-      "tlsServerName": null,
-      "user": "admin",
-      "waitUntilAvailable": 30
-    }
-  },
-  {
-    "env": {
       "EDGEDB_CLIENT_SECURITY": "strict",
       "EDGEDB_CLIENT_TLS_SECURITY": "strict",
       "EDGEDB_DSN": "gel://"
@@ -2620,6 +2593,33 @@
     "warnings": [
       "gel_and_edgedb"
     ]
+  },
+  {
+    "env": {
+      "GEL_CREDENTIALS_FILE": "/home/edgedb/test/credentials.json"
+    },
+    "fs": {
+      "files": {
+        "/home/edgedb/test/credentials.json": "{\"user\":\"admin\",\"host\":\"localhost\",\"port\":10708,\"password\":\"6QLRngM44PSU79LCwdLUUdl6\",\"secret_key\":null,\"database\":\"edgedb\",\"branch\":\"__default__\",\"tls_ca\":\"-----BEGIN CERTIFICATE-----\\nMIICzDCCAbSgAwIBAgIQb53waCS6TqmLGOwBEG5+EzANBgkqhkiG9w0BAQsFADAV\\nMRMwEQYDVQQDDApHZWwgU2VydmVyMB4XDTI1MDYyNTExNDEzNFoXDTQ0MDgyNTEx\\nNDEzNFowFTETMBEGA1UEAwwKR2VsIFNlcnZlcjCCASIwDQYJKoZIhvcNAQEBBQAD\\nggEPADCCAQoCggEBAO8AKwCbQpodJY/hV9FtVKWSypNJfZss9WmbhhluDFZpYE7y\\nOrLKafKcIQ+ZusotE/OwBBk+jRFVVCj8GZ3MG++OUdYRYw5mdraA+P3Myx3+hUHG\\nZdmWifvqW1qihZY86uS1fW6Wckfj+PDCtMFYmd1eM4nVI8GHTIAvnTw/nM3e81Q3\\nrsQhUgHNTNGzm4u7/U/GhIaUKDSlsAPTTRRxCYibM7+7nyfzZ/DHo5GqWaUYOFui\\nD+TVxVKbZF1DBgt/W3mdE0VPL94lks96L1BVvsqC9BqzqSpMblMJMWo7FjWT1XI1\\nkXszsXet2ry8bo/+zfDo7uYTX3cY4EpdfucuTMECAwEAAaMYMBYwFAYDVR0RBA0w\\nC4IJbG9jYWxob3N0MA0GCSqGSIb3DQEBCwUAA4IBAQC/laK6xmt5hLYjPQARvrqS\\nBUbIpp5W5TzbwDAYM9F5g3HD53bo/17PbPkArhwCwNvkcjoUcb8gX1OSdpPEFoKX\\nEhsuEI3DJ7TpSDZ5fuqpIKJiVaOQ/GYsWvdlTDlQxkEgGraBW79GZI3p1gNvg2ga\\naJ1v4DvLlTbSBXzZiyHLsjdCZAfwMbSANwnNTeUOgj8kwlRmeETYiGA3apLqg1BV\\n2OpfVvzdvOrhoKA+FHQNmQ6x6Z9tibdDBrTrm8CMOhtrc4v1c8sOqi5vMR7bxt0y\\nlw/tZaUZ62XYp+9lviFLaVZm1a8LpLR1Z3O4FzkAQ0mlO6lJIVfRTU9n8DnF8FZD\\n-----END CERTIFICATE-----\\n\",\"tls_security\":\"no_host_verification\",\"tls_server_name\":null}"
+      }
+    },
+    "name": "credentials_file_test_branch__default__",
+    "result": {
+      "address": [
+        "localhost",
+        10708
+      ],
+      "branch": "__default__",
+      "database": "edgedb",
+      "password": "6QLRngM44PSU79LCwdLUUdl6",
+      "secretKey": null,
+      "serverSettings": {},
+      "tlsCAData": "-----BEGIN CERTIFICATE-----\nMIICzDCCAbSgAwIBAgIQb53waCS6TqmLGOwBEG5+EzANBgkqhkiG9w0BAQsFADAV\nMRMwEQYDVQQDDApHZWwgU2VydmVyMB4XDTI1MDYyNTExNDEzNFoXDTQ0MDgyNTEx\nNDEzNFowFTETMBEGA1UEAwwKR2VsIFNlcnZlcjCCASIwDQYJKoZIhvcNAQEBBQAD\nggEPADCCAQoCggEBAO8AKwCbQpodJY/hV9FtVKWSypNJfZss9WmbhhluDFZpYE7y\nOrLKafKcIQ+ZusotE/OwBBk+jRFVVCj8GZ3MG++OUdYRYw5mdraA+P3Myx3+hUHG\nZdmWifvqW1qihZY86uS1fW6Wckfj+PDCtMFYmd1eM4nVI8GHTIAvnTw/nM3e81Q3\nrsQhUgHNTNGzm4u7/U/GhIaUKDSlsAPTTRRxCYibM7+7nyfzZ/DHo5GqWaUYOFui\nD+TVxVKbZF1DBgt/W3mdE0VPL94lks96L1BVvsqC9BqzqSpMblMJMWo7FjWT1XI1\nkXszsXet2ry8bo/+zfDo7uYTX3cY4EpdfucuTMECAwEAAaMYMBYwFAYDVR0RBA0w\nC4IJbG9jYWxob3N0MA0GCSqGSIb3DQEBCwUAA4IBAQC/laK6xmt5hLYjPQARvrqS\nBUbIpp5W5TzbwDAYM9F5g3HD53bo/17PbPkArhwCwNvkcjoUcb8gX1OSdpPEFoKX\nEhsuEI3DJ7TpSDZ5fuqpIKJiVaOQ/GYsWvdlTDlQxkEgGraBW79GZI3p1gNvg2ga\naJ1v4DvLlTbSBXzZiyHLsjdCZAfwMbSANwnNTeUOgj8kwlRmeETYiGA3apLqg1BV\n2OpfVvzdvOrhoKA+FHQNmQ6x6Z9tibdDBrTrm8CMOhtrc4v1c8sOqi5vMR7bxt0y\nlw/tZaUZ62XYp+9lviFLaVZm1a8LpLR1Z3O4FzkAQ0mlO6lJIVfRTU9n8DnF8FZD\n-----END CERTIFICATE-----\n",
+      "tlsSecurity": "no_host_verification",
+      "tlsServerName": null,
+      "user": "admin",
+      "waitUntilAvailable": "PT30S"
+    }
   },
   {
     "fs": {
