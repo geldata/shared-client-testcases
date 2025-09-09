@@ -561,5 +561,17 @@
       "password": "not_secret_password",
       "user": "testuser"
     }
+  },
+  {
+    "name": "tls_security_with_tls_server_name_1",
+    "opts": {
+      "dsn": "gel://localhost",
+      "tlsSecurity": "insecure",
+      "tlsServerName": "foo.example.com"
+    },
+    "result": {
+      "tlsSecurity": "insecure",
+      "tlsServerName": "foo.example.com"
+    }
   }
 ]
